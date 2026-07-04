@@ -142,12 +142,20 @@
           <span lang="id">Salin prompt di bawah ini dan tempelkan ke asisten coding AI Anda (Gemini, Claude, Cursor, dll.) untuk memasang SkillForge secara otomatis tanpa klon manual.</span>
         </p>
         
-        <div class="prompt-box">
-          <pre><code><span lang="en">Please download the SkillForge framework from https://github.com/lensetek/SkillForge/archive/refs/heads/master.zip. Do not use git clone. Download the zip file, extract its contents into this workspace directory, and ensure the .agents folder is properly set up as my workspace customization root. After that, read the SKILL.md from agent-forge to understand your new role.</span><span lang="id">Tolong unduh framework SkillForge dari https://github.com/lensetek/SkillForge/archive/refs/heads/master.zip. Jangan gunakan git clone. Unduh file zip tersebut, ekstrak isinya ke dalam direktori workspace ini, dan pastikan folder .agents terpasang dengan benar sebagai kustomisasi workspace saya. Setelah itu, baca SKILL.md dari agent-forge untuk memahami peranmu.</span></code></pre>
-          <button id="copy-prompt-btn" class="btn-primary">
-            <span lang="en">Copy Prompt</span>
-            <span lang="id">Salin Prompt</span>
-          </button>
+        <div class="prompt-container">
+          <div class="prompt-header">
+            <span class="prompt-title">
+              <span lang="en">AI Agent Prompt</span>
+              <span lang="id">Prompt AI Agent</span>
+            </span>
+            <button id="copy-prompt-btn" class="btn-copy">
+              <span lang="en">Copy Prompt</span>
+              <span lang="id">Salin Prompt</span>
+            </button>
+          </div>
+          <div class="prompt-body">
+            <pre><code><span lang="en">Please download the SkillForge framework from https://github.com/lensetek/SkillForge/archive/refs/heads/master.zip. Do not use git clone. Download the zip file, extract its contents into this workspace directory, and ensure the .agents folder is properly set up as my workspace customization root. After that, read the SKILL.md from agent-forge to understand your new role.</span><span lang="id">Tolong unduh framework SkillForge dari https://github.com/lensetek/SkillForge/archive/refs/heads/master.zip. Jangan gunakan git clone. Unduh file zip tersebut, ekstrak isinya ke dalam direktori workspace ini, dan pastikan folder .agents terpasang dengan benar sebagai kustomisasi workspace saya. Setelah itu, baca SKILL.md dari agent-forge untuk memahami peranmu.</span></code></pre>
+          </div>
         </div>
       </div>
     </section>
