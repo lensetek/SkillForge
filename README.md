@@ -27,6 +27,7 @@ SkillForge/
 │   │   └── auto-update/       # Sinkronisasi Git
 │   ├── user-profile.json      # File preferensi memori
 │   └── AGENTS.md              # Workspace Orchestrator (Instruksi Utama Agen)
+├── output/                    # Direktori standar untuk distribusi paket Agen Mandiri Baru
 ├── index.html                 # Landing Page Multi-bahasa
 ├── style.css                  # Desain responsif premium
 ├── script.js                  # Logika landing page & pergantian bahasa
@@ -95,6 +96,7 @@ SkillForge/
 │   │   └── auto-update/       # Git-based synchronization
 │   ├── user-profile.json      # Memory preference storage
 │   └── AGENTS.md              # Workspace Orchestrator (Central Agent Instructions)
+├── output/                    # Standardized directory for newly forged Independent Agent packages
 ├── index.html                 # Multilingual Landing Page
 ├── style.css                  # Premium responsive design
 ├── script.js                  # Landing page logic & toggle

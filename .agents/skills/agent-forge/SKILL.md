@@ -66,13 +66,20 @@ You are a specialized AI agent tasked with [specific mission].
 
 ### Phase 4: Automatic Forging (The Execution)
 Once the user approves the generated blueprints:
-1. Ask the user for confirmation to write these skills to disk.
-2. Upon approval, automatically initialize the folder structure under `c:\Users\ACER\Documents\GitHub\SkillForge\.agents\skills/[skill-name]/`.
-3. Write the generated `SKILL.md` directly to disk (into the respective folder).
-4. Inform the user when the installation is complete so they can reload and test it immediately.
+1. Ask the user for confirmation to write these files to disk.
+2. Determine the target location based on the type of creation:
+   - **For Current Workspace Customization:** Automatically initialize the folder structure under `c:\Users\ACER\Documents\GitHub\SkillForge\.agents\skills/[skill-name]/` and write the generated `SKILL.md` directly into it.
+   - **For a New Independent Agent:** Initialize a complete self-contained agent workspace under `c:\Users\ACER\Documents\GitHub\SkillForge\output/[agent-name]/` (generating its own `.agents/` folder, skills, landing pages, orchestrator, and documentation).
+3. Inform the user when the installation is complete so they can inspect, package, or install it.
 
 ## Guiding Principles
-- **Mandatory Core Modules & Orchestrator:** Every agent ecosystem you architect MUST always include three foundational modules:
+- **Standardized Output (Agent Factory Delivery):** When forging a new independent agent, all of its files and directories must be created inside a dedicated subfolder within the root `/output/` directory (e.g., `output/[agent-name]/`). This ensures that the creator framework (SkillForge) and the generated independent agents are cleanly separated.
+- **Browser Automation Capabilities:** If a forged agent requires web browser control (e.g., logging in, filling forms, submitting data, web scraping):
+  1. **Library Selection:** Utilize robust libraries like Playwright (preferred for Python/Node) or Puppeteer.
+  2. **Session Persistence:** Implement session saving/loading (cookies and session states) stored under `output/[agent-name]/session.json` to avoid repetitive login flows.
+  3. **Credential Guardrails:** Credentials must be read securely from a local `.env` file or environment variables, never hardcoded in prompt scripts or skills.
+  4. **Error Recovery & Logging:** Always capture a screenshot on execution failure, saving it directly to `/output/[agent-name]/error_screenshot.png` for user debugging.
+- **Mandatory Core Modules & Orchestrator:** Every agent ecosystem you architect MUST always include three foundational modules inside its target `.agents/` structure:
   1. `user-profile`: An agent or skill designed to learn from user interactions, store preferences, and make the main agent more personal and intelligent over time without repetitive prompting.
   2. `auto-update`: An agent or skill designed to automatically check for updates to the agent's instructions (e.g., pulling latest `SKILL.md` from a repository).
   3. `AGENTS.md` (Workspace Orchestrator): A central markdown file located in `.agents/AGENTS.md` that directs the main AI Agent on startup to load the user profile context, check for updates, and coordinate workflows and task delegation among the specialized sub-agents.
