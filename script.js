@@ -40,4 +40,23 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Copy Prompt Button Logic
+  const copyPromptBtn = document.getElementById('copy-prompt-btn');
+  if (copyPromptBtn) {
+    copyPromptBtn.addEventListener('click', () => {
+      const currentLang = body.classList.contains('lang-en') ? 'en' : 'id';
+      const promptText = document.querySelector(`.prompt-box pre span[lang="${currentLang}"]`).textContent;
+      
+      navigator.clipboard.writeText(promptText).then(() => {
+        const originalText = copyPromptBtn.innerHTML;
+        copyPromptBtn.innerHTML = currentLang === 'en' ? 'Copied!' : 'Tersalin!';
+        setTimeout(() => {
+          copyPromptBtn.innerHTML = originalText;
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy text: ', err);
+      });
+    });
+  }
 });

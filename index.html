@@ -26,11 +26,15 @@
           <span lang="en">Features</span>
           <span lang="id">Fitur</span>
         </a>
+        <a href="#installation" id="nav-installation-link">
+          <span lang="en">Install</span>
+          <span lang="id">Instalasi</span>
+        </a>
         <a href="#whats-new" id="nav-news-link">
           <span lang="en">What's New</span>
           <span lang="id">Yang Baru</span>
         </a>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer" id="nav-github-link">Repository</a>
+        <a href="https://github.com/lensetek/SkillForge" target="_blank" rel="noopener noreferrer" id="nav-github-link">Repository</a>
       </nav>
       <div class="controls">
         <button id="lang-toggle-btn" class="btn-secondary" aria-label="Toggle Language">
@@ -126,6 +130,28 @@
       </div>
     </section>
 
+    <!-- Installation Section -->
+    <section id="installation" class="installation-section">
+      <div class="glass-card installation-card">
+        <h2 class="section-title">
+          <span lang="en">Quick Installation via AI Agent</span>
+          <span lang="id">Instalasi Cepat via AI Agent</span>
+        </h2>
+        <p class="section-subtitle">
+          <span lang="en">Copy the prompt below and paste it into your AI coding assistant (Gemini, Claude, Cursor, etc.) to set up SkillForge automatically without manual cloning.</span>
+          <span lang="id">Salin prompt di bawah ini dan tempelkan ke asisten coding AI Anda (Gemini, Claude, Cursor, dll.) untuk memasang SkillForge secara otomatis tanpa klon manual.</span>
+        </p>
+        
+        <div class="prompt-box">
+          <pre><code><span lang="en">Please download the SkillForge framework from https://github.com/lensetek/SkillForge/archive/refs/heads/master.zip. Do not use git clone. Download the zip file, extract its contents into this workspace directory, and ensure the .agents folder is properly set up as my workspace customization root. After that, read the SKILL.md from agent-forge to understand your new role.</span><span lang="id">Tolong unduh framework SkillForge dari https://github.com/lensetek/SkillForge/archive/refs/heads/master.zip. Jangan gunakan git clone. Unduh file zip tersebut, ekstrak isinya ke dalam direktori workspace ini, dan pastikan folder .agents terpasang dengan benar sebagai kustomisasi workspace saya. Setelah itu, baca SKILL.md dari agent-forge untuk memahami peranmu.</span></code></pre>
+          <button id="copy-prompt-btn" class="btn-primary">
+            <span lang="en">Copy Prompt</span>
+            <span lang="id">Salin Prompt</span>
+          </button>
+        </div>
+      </div>
+    </section>
+ 
     <!-- What's New Section -->
     <section id="whats-new" class="whats-new-section">
       <div class="glass-card whats-new-card">

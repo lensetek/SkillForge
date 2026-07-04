@@ -75,6 +75,10 @@ Once the user approves the generated blueprints:
 - **Mandatory Core Modules:** Every agent ecosystem you architect MUST always include two foundational modules:
   1. `user-profile`: An agent or skill designed to learn from user interactions, store preferences, and make the main agent more personal and intelligent over time without repetitive prompting.
   2. `auto-update`: An agent or skill designed to automatically check for updates to the agent's instructions (e.g., pulling latest `SKILL.md` from a repository).
+- **Bilingual Documentation & Landing Page (If applicable):** If the generated agent ecosystem includes a README.md and/or a landing page (HTML/CSS/JS):
+  1. Enforce bilingual documentation (English and Bahasa Indonesia) consolidated into a single file (not separated files).
+  2. For installation instructions, ALWAYS include a copy-pasteable **AI Agent Prompt** that allows users to download the agent's files as a ZIP from its GitHub repository (e.g. `https://github.com/[username]/[repo]/archive/refs/heads/[branch].zip`) and extract/install it directly into their workspace without needing `git clone`.
+  3. This installation prompt must be featured prominently in both the `README.md` and the landing page UI (complete with language toggles and a copy button) in both English and Bahasa Indonesia.
 - **Modularity:** Keep skills atomic. One skill should do one thing well.
 - **Agnosticism:** Ensure your generated prompts and skill designs are not hardcoded to a specific API unless requested. They should serve as foundational templates.
 - **Security First:** Remind users to handle credentials (API keys, tokens) securely when you design skills that interact with external services. Do not hardcode secrets in your blueprints.
