@@ -55,18 +55,22 @@ Cukup salin dan tempel instruksi berikut ke AI Agent Anda (seperti Gemini, Claud
 
 ### Usecase & Contoh Penggunaan
 
-#### Usecase: Membuat Agent Content Creator Otomatis
-Anda ingin membangun tim sub-agent kustom untuk menulis draf postingan LinkedIn secara terjadwal.
+#### Usecase: Mengubah Keluhan Harian Menjadi Otomatisasi
+Anda merasa kewalahan karena setiap hari harus meriset berita teknologi terbaru dan menulis rangkumannya untuk audiens LinkedIn Anda. Ini memakan waktu berjam-jam.
 
-**Langkah demi Langkah:**
-1. **Panggil Agent Forge:** Berikan instruksi ke AI Agent utama Anda:
-   > *"Tolong jalankan skill `agent-forge` untuk merancang sub-agent pembuat konten otomatis."*
-2. **Proses Wawancara:** `agent-forge` akan mulai mengajukan pertanyaan berdasarkan preferensi Anda, seperti channel tujuan (misal: LinkedIn) dan gaya bahasanya.
-3. **Penyusunan Blueprint:** `agent-forge` menyusun spesifikasi sub-agent `LinkedInPlanner` beserta skill `write-linkedin-post` dan `schedule-post`.
-4. **Instalasi Otomatis:** Setelah Anda menyetujui cetak biru (*blueprint*), berikan instruksi:
-   > *"Saya setuju, tulis semua skill ini ke direktori."*
-5. **Eksekusi:** Agent utama memuat ulang workspace dan siap menerima perintah seperti:
-   > *"Tolong jadwalkan postingan tentang tips AI terbaru untuk besok pagi."*
+**Langkah demi Langkah (Skenario Percakapan):**
+1. **Ceritakan Masalah Anda:** Anda cukup mengeluh atau curhat ke AI Agent utama di workspace ini:
+   > *"Saya capek sekali setiap hari harus mencari berita AI terbaru dan menulis rangkumannya untuk LinkedIn. Habis waktu berjam-jam!"*
+2. **AI Menganalisis & Merekomendasikan Solusi:** AI Agent Anda menganalisis keluhan tersebut dan menawarkan solusi:
+   > *"Saya memahami kendala Anda. Ini adalah masalah riset dan penulisan yang repetitif. Saya merekomendasikan pembuatan sistem otomatis yang terdiri dari dua sub-agent: satu untuk riset berita tepercaya, dan satu untuk menulis draf sesuai gaya bahasa Anda."*
+3. **Kolaborasi Cetak Biru (Wawancara):** Agen menjalankan `agent-forge` untuk mewawancarai Anda secara santai guna memperjelas detail cetak biru:
+   > *"Apakah Anda ingin rangkuman berita ini bersifat harian atau mingguan? Apa saja sumber berita yang Anda percayai? Dan bagaimana gaya bahasa yang Anda sukai?"*
+4. **Instalasi Otomatis:** Setelah Anda menyetujui cetak biru rancangannya, Anda cukup mengetik konfirmasi:
+   > *"Desain bagus, tolong pasang sekarang."*
+   Agen otomatis membuat file sub-agent dan skill yang diperlukan ke disk.
+5. **Masalah Terselesaikan:** Workspace memuat ulang sistem baru ini secara otomatis. Sekarang Anda cukup memberikan instruksi sederhana seperti:
+   > *"Tolong rangkum berita AI terpopuler hari ini."*
+   Dan sistem sub-agent riset & penulis Anda akan menyelesaikan seluruh tugas tersebut dalam hitungan detik.
 
 ---
 
@@ -121,15 +125,19 @@ Simply copy and paste the following prompt to your AI Agent (like Gemini, Claude
 
 ### Use Cases & Usage Example
 
-#### Use Case: Automated Content Creator Agent
-You want to build a custom sub-agent team to draft and schedule LinkedIn posts.
+#### Use Case: From Daily Frustrations to Automation
+You are overwhelmed because you spend hours every day researching the latest AI news and writing summaries for your LinkedIn audience.
 
-**Step-by-Step Example:**
-1. **Trigger Agent Forge:** Tell your main AI Agent:
-   > *"Please run the `agent-forge` skill to design an automated content creator sub-agent."*
-2. **The Interview:** `agent-forge` will ask questions tailored to your needs, such as target channels (e.g. LinkedIn) and preferred tone.
-3. **Blueprint Design:** `agent-forge` designs the `LinkedInPlanner` sub-agent alongside the `write-linkedin-post` and `schedule-post` skills.
-4. **Automatic Installation:** Once you approve the blueprint, instruct the agent:
+**Step-by-Step Example (Conversational Journey):**
+1. **Share Your Pain Point:** Simply tell the main AI Agent in your workspace:
+   > *"I'm exhausted researching AI news and writing daily summaries for my LinkedIn audience. It takes hours!"*
+2. **AI Identifies & Recommends Solution:** The AI Agent analyzes your frustration and recommends a solution:
+   > *"I hear you. This is a classic research and content creation bottleneck. I recommend building a custom system with two specialized sub-agents: one for researching news from trusted sources, and another for writing drafts in your personal style."*
+3. **Collaborative Design (The Interview):** The agent runs `agent-forge` to start a conversational interview to design the blueprint:
+   > *"Would you like daily or weekly summaries? What news sources do you trust? And how would you describe your target writing tone?"*
+4. **Automatic Installation:** Once you approve the proposed design, simply confirm:
    > *"Approved. Write all these skills to disk."*
-5. **Execution:** The main agent reloads the workspace and is now ready to handle instructions like:
-   > *"Draft and schedule a LinkedIn post about AI trends for tomorrow morning."*
+   The agent automatically generates all sub-agent and tool files.
+5. **Problem Resolved:** The workspace automatically reloads the new system. Now you can instruct it simply:
+   > *"Summarize today's top tech news."*
+   And your newly built team of specialized sub-agents will run the entire workflow in seconds.
