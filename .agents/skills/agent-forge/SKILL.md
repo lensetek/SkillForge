@@ -80,6 +80,7 @@ Once the user approves the generated blueprints:
   1. Enforce bilingual documentation (English and Bahasa Indonesia) consolidated into a single file (not separated files).
   2. For installation instructions, ALWAYS include a copy-pasteable **AI Agent Prompt** that allows users to download the agent's files as a ZIP from its GitHub repository (e.g. `https://github.com/[username]/[repo]/archive/refs/heads/[branch].zip`) and extract/install it directly into their workspace without needing `git clone`.
   3. This installation prompt must be featured prominently in both the `README.md` and the landing page UI (complete with language toggles and a copy button) in both English and Bahasa Indonesia.
+  4. Always include clear **Use Cases and Step-by-Step Usage Examples** in both the generated `README.md` and landing page (featuring interactive walkthrough steps or flow diagrams) to guide the end-user on how to prompt the agent to perform the targeted tasks.
 - **Modularity:** Keep skills atomic. One skill should do one thing well.
 - **Agnosticism:** Ensure your generated prompts and skill designs are not hardcoded to a specific API unless requested. They should serve as foundational templates.
 - **Security First:** Remind users to handle credentials (API keys, tokens) securely when you design skills that interact with external services. Do not hardcode secrets in your blueprints.

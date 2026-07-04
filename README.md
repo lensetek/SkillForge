@@ -53,6 +53,21 @@ Cukup salin dan tempel instruksi berikut ke AI Agent Anda (seperti Gemini, Claud
 
 > "Tolong unduh framework SkillForge dari `https://github.com/lensetek/SkillForge/archive/refs/heads/master.zip`. Jangan gunakan `git clone`. Unduh file zip tersebut, ekstrak isinya ke dalam direktori workspace ini, dan pastikan folder `.agents` terpasang dengan benar sebagai kustomisasi workspace saya. Setelah itu, baca `SKILL.md` dari `agent-forge` untuk memahami peranmu."
 
+### Usecase & Contoh Penggunaan
+
+#### Usecase: Membuat Agent Content Creator Otomatis
+Anda ingin membangun tim sub-agent kustom untuk menulis draf postingan LinkedIn secara terjadwal.
+
+**Langkah demi Langkah:**
+1. **Panggil Agent Forge:** Berikan instruksi ke AI Agent utama Anda:
+   > *"Tolong jalankan skill `agent-forge` untuk merancang sub-agent pembuat konten otomatis."*
+2. **Proses Wawancara:** `agent-forge` akan mulai mengajukan pertanyaan berdasarkan preferensi Anda, seperti channel tujuan (misal: LinkedIn) dan gaya bahasanya.
+3. **Penyusunan Blueprint:** `agent-forge` menyusun spesifikasi sub-agent `LinkedInPlanner` beserta skill `write-linkedin-post` dan `schedule-post`.
+4. **Instalasi Otomatis:** Setelah Anda menyetujui cetak biru (*blueprint*), berikan instruksi:
+   > *"Saya setuju, tulis semua skill ini ke direktori."*
+5. **Eksekusi:** Agent utama memuat ulang workspace dan siap menerima perintah seperti:
+   > *"Tolong jadwalkan postingan tentang tips AI terbaru untuk besok pagi."*
+
 ---
 
 ## English
@@ -103,3 +118,18 @@ SkillForge/
 Simply copy and paste the following prompt to your AI Agent (like Gemini, Claude, or Cursor):
 
 > "Please download the SkillForge framework from `https://github.com/lensetek/SkillForge/archive/refs/heads/master.zip`. Do not use `git clone`. Download the zip file, extract its contents into this workspace directory, and ensure the `.agents` folder is properly set up as my workspace customization root. After that, read the `SKILL.md` from `agent-forge` to understand your new role."
+
+### Use Cases & Usage Example
+
+#### Use Case: Automated Content Creator Agent
+You want to build a custom sub-agent team to draft and schedule LinkedIn posts.
+
+**Step-by-Step Example:**
+1. **Trigger Agent Forge:** Tell your main AI Agent:
+   > *"Please run the `agent-forge` skill to design an automated content creator sub-agent."*
+2. **The Interview:** `agent-forge` will ask questions tailored to your needs, such as target channels (e.g. LinkedIn) and preferred tone.
+3. **Blueprint Design:** `agent-forge` designs the `LinkedInPlanner` sub-agent alongside the `write-linkedin-post` and `schedule-post` skills.
+4. **Automatic Installation:** Once you approve the blueprint, instruct the agent:
+   > *"Approved. Write all these skills to disk."*
+5. **Execution:** The main agent reloads the workspace and is now ready to handle instructions like:
+   > *"Draft and schedule a LinkedIn post about AI trends for tomorrow morning."*
