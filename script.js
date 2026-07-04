@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (copyPromptBtn) {
     copyPromptBtn.addEventListener('click', () => {
       const currentLang = body.classList.contains('lang-en') ? 'en' : 'id';
-      const promptText = document.querySelector(`.prompt-body pre span[lang="${currentLang}"]`).textContent;
+      const promptText = document.querySelector(`.prompt-text span[lang="${currentLang}"]`).textContent;
       
       navigator.clipboard.writeText(promptText).then(() => {
         const originalText = copyPromptBtn.innerHTML;

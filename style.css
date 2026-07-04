@@ -423,19 +423,16 @@ body {
   padding: 1.5rem;
 }
 
-.prompt-body pre {
-  margin: 0;
-  white-space: pre-wrap;
-}
-
-.prompt-body code {
+.prompt-text {
   font-family: var(--font-body);
   font-size: 0.95rem;
   color: var(--text-primary);
   line-height: 1.6;
+  margin: 0;
   white-space: pre-wrap;
+  word-wrap: break-word;
   word-break: break-word;
-  display: block;
+  overflow-wrap: break-word;
 }
 
 /* Use Cases Section */
