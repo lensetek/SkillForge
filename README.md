@@ -63,14 +63,12 @@ Anda merasa kewalahan karena setiap hari harus meriset berita teknologi terbaru 
    > *"Saya capek sekali setiap hari harus mencari berita AI terbaru dan menulis rangkumannya untuk LinkedIn. Habis waktu berjam-jam!"*
 2. **AI Menganalisis & Merekomendasikan Solusi:** AI Agent Anda menganalisis keluhan tersebut dan menawarkan solusi:
    > *"Saya memahami kendala Anda. Ini adalah masalah riset dan penulisan yang repetitif. Saya merekomendasikan pembuatan sistem otomatis yang terdiri dari dua sub-agent: satu untuk riset berita tepercaya, dan satu untuk menulis draf sesuai gaya bahasa Anda."*
-3. **Kolaborasi Cetak Biru (Wawancara):** Agen menjalankan `agent-forge` untuk mewawancarai Anda secara santai guna memperjelas detail cetak biru:
+3. **Kolaborasi Cetak Biru (Wawancara):** Agen menjalankan perintah slash `/agent-forge` untuk mewawancarai Anda secara santai guna memperjelas detail cetak biru:
    > *"Apakah Anda ingin rangkuman berita ini bersifat harian atau mingguan? Apa saja sumber berita yang Anda percayai? Dan bagaimana gaya bahasa yang Anda sukai?"*
 4. **Instalasi Otomatis:** Setelah Anda menyetujui cetak biru rancangannya, Anda cukup mengetik konfirmasi:
    > *"Desain bagus, tolong pasang sekarang."*
    Agen otomatis membuat file sub-agent dan skill yang diperlukan ke disk.
-5. **Masalah Terselesaikan:** Workspace memuat ulang sistem baru ini secara otomatis. Sekarang Anda cukup memberikan instruksi sederhana seperti:
-   > *"Tolong rangkum berita AI terpopuler hari ini."*
-   Dan sistem sub-agent riset & penulis Anda akan menyelesaikan seluruh tugas tersebut dalam hitungan detik.
+5. **Masalah Terselesaikan:** Workspace memuat ulang sistem baru ini secara otomatis. Sekarang Anda cukup mengetik perintah slash kustom `/write-post` (atau cukup meminta: *"Tolong rangkum berita AI terpopuler hari ini"*) dan sistem sub-agent kustom Anda akan menyelesaikan seluruh tugas tersebut dalam hitungan detik.
 
 ---
 
@@ -133,11 +131,9 @@ You are overwhelmed because you spend hours every day researching the latest AI 
    > *"I'm exhausted researching AI news and writing daily summaries for my LinkedIn audience. It takes hours!"*
 2. **AI Identifies & Recommends Solution:** The AI Agent analyzes your frustration and recommends a solution:
    > *"I hear you. This is a classic research and content creation bottleneck. I recommend building a custom system with two specialized sub-agents: one for researching news from trusted sources, and another for writing drafts in your personal style."*
-3. **Collaborative Design (The Interview):** The agent runs `agent-forge` to start a conversational interview to design the blueprint:
+3. **Collaborative Design (The Interview):** The agent runs the `/agent-forge` slash command to start a conversational interview to design the blueprint:
    > *"Would you like daily or weekly summaries? What news sources do you trust? And how would you describe your target writing tone?"*
 4. **Automatic Installation:** Once you approve the proposed design, simply confirm:
    > *"Approved. Write all these skills to disk."*
    The agent automatically generates all sub-agent and tool files.
-5. **Problem Resolved:** The workspace automatically reloads the new system. Now you can instruct it simply:
-   > *"Summarize today's top tech news."*
-   And your newly built team of specialized sub-agents will run the entire workflow in seconds.
+5. **Problem Resolved:** The workspace automatically reloads the new system. Now you can simply run the new slash command `/write-post` (or instruct: *"Summarize today's top tech news"*) and your custom sub-agents will run the entire workflow in seconds.
