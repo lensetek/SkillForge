@@ -13,6 +13,7 @@ SkillForge adalah framework kustomisasi workspace yang dirancang untuk membangun
 - **Agent Forge (Meta-Agent):** Agen analis sistem yang mewawancarai pengguna untuk menerjemahkan permintaan samar menjadi ekosistem sub-agent kustom.
 - **Memori User Profile:** Pembelajaran dinamis terhadap preferensi pengguna, menyimpan konteks secara lokal untuk mempersonalisasi interaksi selanjutnya.
 - **Auto Update:** Integrasi bawaan dengan Git untuk secara otomatis mendeteksi dan memperbarui skill agen agar tetap sinkron.
+- **Workspace Orchestrator (AGENTS.md):** Pondasi instruksi pusat yang mengotomatisasi inisialisasi profile, pemeriksaan update, dan koordinasi antar sub-agent pada setiap startup sesi.
 - **Dukungan Multi-Bahasa:** Dokumentasi dan antarmuka landing page dalam dua bahasa secara langsung.
 
 ### Struktur Direktori
@@ -20,10 +21,12 @@ SkillForge adalah framework kustomisasi workspace yang dirancang untuk membangun
 ```
 SkillForge/
 ├── .agents/
-│   └── skills/
-│       ├── agent-forge/       # Meta-Agent Architect
-│       ├── user-profile/      # Personalisasi & memori
-│       └── auto-update/       # Sinkronisasi Git
+│   ├── skills/
+│   │   ├── agent-forge/       # Meta-Agent Architect
+│   │   ├── user-profile/      # Personalisasi & memori
+│   │   └── auto-update/       # Sinkronisasi Git
+│   ├── user-profile.json      # File preferensi memori
+│   └── AGENTS.md              # Workspace Orchestrator (Instruksi Utama Agen)
 ├── index.html                 # Landing Page Multi-bahasa
 ├── style.css                  # Desain responsif premium
 ├── script.js                  # Logika landing page & pergantian bahasa
@@ -61,6 +64,7 @@ SkillForge is a workspace customization framework designed to build, manage, and
 - **Agent Forge (Meta-Agent):** A system analyst agent that interviews users to translate high-level requests into customized sub-agent ecosystems.
 - **User Profile Memory:** Dynamic learning of user preferences, storing context locally to personalize subsequent interactions.
 - **Auto Update:** Built-in git integration to automatically fetch and pull changes to keep skills synchronized.
+- **Workspace Orchestrator (AGENTS.md):** Central instruction foundation that automates profile initialization, updates checks, and coordinates work delegation between sub-agents on every session startup.
 - **Multilingual Support:** Multi-language documentation and landing page interfaces out-of-the-box.
 
 ### Directory Structure
@@ -68,10 +72,12 @@ SkillForge is a workspace customization framework designed to build, manage, and
 ```
 SkillForge/
 ├── .agents/
-│   └── skills/
-│       ├── agent-forge/       # The Meta-Agent Architect
-│       ├── user-profile/      # Personalization & memory
-│       └── auto-update/       # Git-based synchronization
+│   ├── skills/
+│   │   ├── agent-forge/       # The Meta-Agent Architect
+│   │   ├── user-profile/      # Personalization & memory
+│   │   └── auto-update/       # Git-based synchronization
+│   ├── user-profile.json      # Memory preference storage
+│   └── AGENTS.md              # Workspace Orchestrator (Central Agent Instructions)
 ├── index.html                 # Multilingual Landing Page
 ├── style.css                  # Premium responsive design
 ├── script.js                  # Landing page logic & toggle

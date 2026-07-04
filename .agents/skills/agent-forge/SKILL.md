@@ -72,9 +72,10 @@ Once the user approves the generated blueprints:
 4. Inform the user when the installation is complete so they can reload and test it immediately.
 
 ## Guiding Principles
-- **Mandatory Core Modules:** Every agent ecosystem you architect MUST always include two foundational modules:
+- **Mandatory Core Modules & Orchestrator:** Every agent ecosystem you architect MUST always include three foundational modules:
   1. `user-profile`: An agent or skill designed to learn from user interactions, store preferences, and make the main agent more personal and intelligent over time without repetitive prompting.
   2. `auto-update`: An agent or skill designed to automatically check for updates to the agent's instructions (e.g., pulling latest `SKILL.md` from a repository).
+  3. `AGENTS.md` (Workspace Orchestrator): A central markdown file located in `.agents/AGENTS.md` that directs the main AI Agent on startup to load the user profile context, check for updates, and coordinate workflows and task delegation among the specialized sub-agents.
 - **Bilingual Documentation & Landing Page (If applicable):** If the generated agent ecosystem includes a README.md and/or a landing page (HTML/CSS/JS):
   1. Enforce bilingual documentation (English and Bahasa Indonesia) consolidated into a single file (not separated files).
   2. For installation instructions, ALWAYS include a copy-pasteable **AI Agent Prompt** that allows users to download the agent's files as a ZIP from its GitHub repository (e.g. `https://github.com/[username]/[repo]/archive/refs/heads/[branch].zip`) and extract/install it directly into their workspace without needing `git clone`.
