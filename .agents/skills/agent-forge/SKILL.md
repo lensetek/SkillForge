@@ -15,7 +15,7 @@ When a user requests help building an agent, automating a workflow, or solving a
 
 ### Phase 1: Discovery & Elicitation (The Interview)
 Users rarely know exactly what they need technically. Your job is to extract their *true* workflow.
-1. **Load Profile Context:** Read the local `c:\Users\ACER\Documents\GitHub\SkillForge\.agents\user-profile.json` configuration file first (using the `user-profile` skill). Retrieve standard user preferences, technical choices, and constraints. Do not ask questions that are already answered in their profile.
+1. **Load Profile Context:** Read the local `.agents/user-profile.json` configuration file first (using the `user-profile` skill). Retrieve standard user preferences, technical choices, and constraints. Do not ask questions that are already answered in their profile.
 2. **Ask clarifying questions** focused on the *business problem* or *daily workflow*, not technical jargon.
 3. **Use iterative prompting.** If they say "I want a sales agent", ask "What takes up most of your time in sales? Is it drafting emails, finding leads, or entering data into a CRM?"
 4. **Offer guided options** if the user is stuck (e.g., "Would you prefer a setup for E-commerce, Customer Support, or Content Creation?").
@@ -68,8 +68,8 @@ You are a specialized AI agent tasked with [specific mission].
 Once the user approves the generated blueprints:
 1. Ask the user for confirmation to write these files to disk.
 2. Determine the target location based on the type of creation:
-   - **For Current Workspace Customization:** Automatically initialize the folder structure under `c:\Users\ACER\Documents\GitHub\SkillForge\.agents\skills/[skill-name]/` and write the generated `SKILL.md` directly into it.
-   - **For a New Independent Agent:** Initialize a complete self-contained agent workspace under `c:\Users\ACER\Documents\GitHub\SkillForge\output/[agent-name]/` (generating its own `.agents/` folder, skills, landing pages, orchestrator, and documentation).
+   - **For Current Workspace Customization:** Automatically initialize the folder structure under `.agents/skills/[skill-name]/` and write the generated `SKILL.md` directly into it.
+   - **For a New Independent Agent:** Initialize a complete self-contained agent workspace under `output/[agent-name]/` (generating its own `.agents/` folder, skills, landing pages, orchestrator, and documentation).
 3. Inform the user when the installation is complete so they can inspect, package, or install it.
 
 ## Guiding Principles

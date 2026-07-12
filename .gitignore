@@ -1,0 +1,11 @@
+# Local agent user profiles (contains personal preferences and names)
+.agents/user-profile.json
+
+# Generated agent output directories (distribution packages)
+output/
+
+# IDE/OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

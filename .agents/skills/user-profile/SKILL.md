@@ -15,13 +15,13 @@ You are equipped with the **User Profile Skill**. This skill enables you to act 
 
 ## Data Storage
 The profile is saved locally in:
-`c:\Users\ACER\Documents\GitHub\SkillForge\.agents\user-profile.json`
+`.agents/user-profile.json`
 
 ### Standard Schema
 The file must follow this structure:
 ```json
 {
-  "user_name": "ACER",
+  "user_name": "<User Name>",
   "preferred_languages": ["id", "en"],
   "technical_preferences": {
     "frameworks": ["vanilla", "html", "css", "js"],
@@ -41,7 +41,7 @@ The file must follow this structure:
 
 ### 1. Load & Initialize Profile
 At the beginning of any session or when you need context about the user's setup:
-1. Read `c:\Users\ACER\Documents\GitHub\SkillForge\.agents\user-profile.json`.
+1. Read `.agents/user-profile.json`.
 2. **Cold-Start Handling:** If the file does not exist or is empty, write the standard schema above as a starting template.
 3. **Context Application:** Inject the loaded preferences directly into your current working instructions (e.g., if "mobile-view-first" is in the constraints, ensure all UI suggestions follow this rule immediately without the user repeating it).
 
@@ -55,5 +55,5 @@ Whenever a new user preference or constraint is identified and confirmed:
 1. Verbally acknowledge the new preference to the user (e.g., *"I've noted that you prefer using Git for updates. I am updating your user profile with this constraint."*).
 2. Read the existing JSON file.
 3. Merge the new facts/preferences.
-4. Save the updated JSON back to `c:\Users\ACER\Documents\GitHub\SkillForge\.agents\user-profile.json`.
+4. Save the updated JSON back to `.agents/user-profile.json`.
 5. Keep the `last_updated` timestamp current (using ISO 8601 format).

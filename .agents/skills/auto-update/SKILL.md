@@ -14,8 +14,7 @@ You are equipped with the **Auto Update Skill**. This skill ensures that your wo
 - Provide error handling for authentication or repository locking issues.
 
 ## Repository Setup
-The workspace is expected to be a Git repository located at:
-`c:\Users\ACER\Documents\GitHub\SkillForge`
+The workspace is expected to be a Git repository located at the workspace root directory.
 
 ## Workflow & Actions
 
