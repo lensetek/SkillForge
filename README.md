@@ -44,12 +44,19 @@ SkillForge/
 
 ### Memulai & Instalasi
 
-**Opsi 1: Instalasi Manual**
+**Opsi 1: Instalasi Cepat via NPM (Direkomendasikan)**
+Jalankan perintah berikut di terminal direktori proyek Anda:
+```bash
+npx skills add https://github.com/lensetek/SkillForge
+```
+*Penjelasan:* Perintah ini menggunakan utilitas CLI `skills` untuk secara otomatis mengunduh, mengekstrak, dan mengonfigurasi ekosistem agen SkillForge langsung ke dalam workspace Anda.
+
+**Opsi 2: Instalasi Manual**
 1. Atur Workspace AI Anda untuk mengarah ke direktori ini.
 2. Agen akan otomatis mendeteksi dan memuat skill dari folder `.agents`.
 3. Panggil `agent-forge` untuk mulai merancang alur kerja baru Anda.
 
-**Opsi 2: Instalasi Otomatis via AI Prompt (Tanpa Git Clone)**
+**Opsi 3: Instalasi Otomatis via AI Prompt (Tanpa Git Clone)**
 Cukup salin dan tempel instruksi berikut ke AI Agent Anda (seperti Gemini, Claude, atau Cursor):
 
 > "Tolong unduh framework SkillForge dari `https://github.com/lensetek/SkillForge/archive/refs/heads/master.zip`. Jangan gunakan `git clone`. Unduh file zip tersebut, ekstrak isinya ke dalam direktori workspace ini, dan pastikan folder `.agents` terpasang dengan benar sebagai kustomisasi workspace saya. Setelah itu, baca `SKILL.md` dari `agent-forge` untuk memahami peranmu."
@@ -113,12 +120,19 @@ SkillForge/
 
 ### Getting Started & Installation
 
-**Option 1: Manual Setup**
+**Option 1: Quick Installation via NPM (Recommended)**
+Run the following command in your project directory terminal:
+```bash
+npx skills add https://github.com/lensetek/SkillForge
+```
+*Explanation:* This command runs the `skills` CLI utility to automatically download, extract, and configure the SkillForge agent ecosystem directly into your workspace.
+
+**Option 2: Manual Setup**
 1. Set up your AI Workspace to point to this directory.
 2. The agent will automatically discover and load the skills from the `.agents` root.
 3. Call `agent-forge` to start designing new workflows.
 
-**Option 2: Automatic Setup via AI Prompt (No Git Clone)**
+**Option 3: Automatic Setup via AI Prompt (No Git Clone)**
 Simply copy and paste the following prompt to your AI Agent (like Gemini, Claude, or Cursor):
 
 > "Please download the SkillForge framework from `https://github.com/lensetek/SkillForge/archive/refs/heads/master.zip`. Do not use `git clone`. Download the zip file, extract its contents into this workspace directory, and ensure the `.agents` folder is properly set up as my workspace customization root. After that, read the `SKILL.md` from `agent-forge` to understand your new role."

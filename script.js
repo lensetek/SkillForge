@@ -41,6 +41,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Copy NPM Command Logic
+  const copyNpmBtn = document.getElementById('copy-npm-btn');
+  if (copyNpmBtn) {
+    copyNpmBtn.addEventListener('click', () => {
+      const currentLang = body.classList.contains('lang-en') ? 'en' : 'id';
+      const commandText = "npx skills add https://github.com/lensetek/SkillForge";
+      
+      navigator.clipboard.writeText(commandText).then(() => {
+        const originalText = copyNpmBtn.innerHTML;
+        copyNpmBtn.innerHTML = currentLang === 'en' ? 'Copied!' : 'Tersalin!';
+        setTimeout(() => {
+          copyNpmBtn.innerHTML = originalText;
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy text: ', err);
+      });
+    });
+  }
+
   // Copy Prompt Button Logic
   const copyPromptBtn = document.getElementById('copy-prompt-btn');
   if (copyPromptBtn) {

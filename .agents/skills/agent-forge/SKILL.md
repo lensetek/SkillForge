@@ -79,14 +79,20 @@ Once the user approves the generated blueprints:
   2. **Session Persistence:** Implement session saving/loading (cookies and session states) stored under `output/[agent-name]/session.json` to avoid repetitive login flows.
   3. **Credential Guardrails:** Credentials must be read securely from a local `.env` file or environment variables, never hardcoded in prompt scripts or skills.
   4. **Error Recovery & Logging:** Always capture a screenshot on execution failure, saving it directly to `/output/[agent-name]/error_screenshot.png` for user debugging.
-- **Mandatory Core Modules & Orchestrator:** Every agent ecosystem you architect MUST always include three foundational modules inside its target `.agents/` structure:
+- **Mandatory Core Modules & Orchestrator:** Every agent ecosystem you architect MUST always include four foundational modules inside its target `.agents/` structure:
   1. `user-profile`: An agent or skill designed to learn from user interactions, store preferences, and make the main agent more personal and intelligent over time without repetitive prompting.
   2. `auto-update`: An agent or skill designed to automatically check for updates to the agent's instructions (e.g., pulling latest `SKILL.md` from a repository).
-  3. `AGENTS.md` (Workspace Orchestrator): A central markdown file located in `.agents/AGENTS.md` that directs the main AI Agent on startup to load the user profile context, check for updates, and coordinate workflows and task delegation among the specialized sub-agents.
+  3. `agent-handoff`: Explicitly designed to support universal agent interoperability. The generated workspace must have:
+     - `task.md` at the root of the workspace for tracking active checklists using standard markdown checkboxes (`- [ ]`, `- [x]`).
+     - `handoff.md` at the root of the workspace for saving/resuming session states (Goal, Last Status, Next Steps, Context Files, Blockers).
+     - Universal bridge files like `CLAUDE.md` and `.cursorrules` in the root directory that instruct other agents to read `handoff.md` and `task.md` at startup.
+  4. `AGENTS.md` (Workspace Orchestrator): A central markdown file located in `.agents/AGENTS.md` that directs the main AI Agent on startup to load the user profile context, check for updates, read `handoff.md` and `task.md` to load the active session context, and coordinate workflows. It must also instruct the agent to update `handoff.md` and `task.md` upon shutdown or when the user requests a handoff (e.g. "tulis handoff").
 - **Bilingual Documentation & Landing Page (If applicable):** If the generated agent ecosystem includes a README.md and/or a landing page (HTML/CSS/JS):
   1. Enforce bilingual documentation (English and Bahasa Indonesia) consolidated into a single file (not separated files).
-  2. For installation instructions, ALWAYS include a copy-pasteable **AI Agent Prompt** that allows users to download the agent's files as a ZIP from its GitHub repository (e.g. `https://github.com/[username]/[repo]/archive/refs/heads/[branch].zip`) and extract/install it directly into their workspace without needing `git clone`.
-  3. This installation prompt must be featured prominently in both the `README.md` and the landing page UI (complete with language toggles and a copy button) in both English and Bahasa Indonesia.
+  2. For installation instructions, ALWAYS include two primary options:
+     - **Option 1: NPM Command (Recommended):** Provide the command `npx skills add https://github.com/lensetek/[agent-name]` (substituting the correct agent repository name under the `lensetek` organization). Explain that this CLI utility automatically downloads and registers the agent's skills into the user's workspace.
+     - **Option 2: AI Agent Prompt (Auto Setup):** Provide a copy-pasteable prompt that allows users to instruct an AI assistant to download the agent's ZIP from its GitHub repository (e.g. `https://github.com/lensetek/[agent-name]/archive/refs/heads/master.zip`) and extract/install it directly.
+  3. Both installation methods must be featured prominently in both the generated `README.md` and the landing page UI (with copy buttons and language toggles) in both English and Bahasa Indonesia.
   4. Always include clear **Use Cases and Step-by-Step Usage Examples** in both the generated `README.md` and landing page (featuring interactive walkthrough steps or flow diagrams) to guide the end-user on how to prompt the agent to perform the targeted tasks.
 - **Modularity:** Keep skills atomic. One skill should do one thing well.
 - **Agnosticism:** Ensure your generated prompts and skill designs are not hardcoded to a specific API unless requested. They should serve as foundational templates.

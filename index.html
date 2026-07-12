@@ -145,19 +145,41 @@
     <section id="installation" class="installation-section">
       <div class="glass-card installation-card">
         <h2 class="section-title">
-          <span lang="en">Quick Installation via AI Agent</span>
-          <span lang="id">Instalasi Cepat via AI Agent</span>
+          <span lang="en">Choose Installation Method</span>
+          <span lang="id">Pilih Metode Instalasi</span>
         </h2>
         <p class="section-subtitle">
-          <span lang="en">Copy the prompt below and paste it into your AI coding assistant (Gemini, Claude, Cursor, etc.) to set up SkillForge automatically without manual cloning.</span>
-          <span lang="id">Salin prompt di bawah ini dan tempelkan ke asisten coding AI Anda (Gemini, Claude, Cursor, dll.) untuk memasang SkillForge secara otomatis tanpa klon manual.</span>
+          <span lang="en">Set up SkillForge using the automated NPM command or by instructing your AI agent.</span>
+          <span lang="id">Pasang SkillForge menggunakan perintah NPM otomatis atau dengan memberikan instruksi kepada AI Agent Anda.</span>
         </p>
         
+        <!-- Option 1: NPM Command (Recommended) -->
+        <div class="prompt-container" style="margin-bottom: 2rem;">
+          <div class="prompt-header">
+            <span class="prompt-title">
+              <span lang="en">Option 1: NPM Command (Recommended)</span>
+              <span lang="id">Opsi 1: Perintah NPM (Direkomendasikan)</span>
+            </span>
+            <button id="copy-npm-btn" class="btn-copy">
+              <span lang="en">Copy Command</span>
+              <span lang="id">Salin Perintah</span>
+            </button>
+          </div>
+          <div class="prompt-body">
+            <p class="prompt-text monospaced" style="font-family: monospace; font-size: 1.05rem; color: #c084fc; margin-bottom: 0.75rem; font-weight: bold;">npx skills add https://github.com/lensetek/SkillForge</p>
+            <p class="method-description" style="font-size: 0.9rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">
+              <span lang="en">This command runs the <code>skills</code> CLI tool to download, extract, and install the SkillForge agent ecosystem directly into your workspace.</span>
+              <span lang="id">Perintah ini menjalankan alat CLI <code>skills</code> untuk mengunduh, mengekstrak, dan menginstal ekosistem agen SkillForge langsung ke direktori kerja Anda.</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Option 2: AI Agent Prompt -->
         <div class="prompt-container">
           <div class="prompt-header">
             <span class="prompt-title">
-              <span lang="en">AI Agent Prompt</span>
-              <span lang="id">Prompt AI Agent</span>
+              <span lang="en">Option 2: AI Agent Prompt (Auto Setup)</span>
+              <span lang="id">Opsi 2: Prompt AI Agent (Instalasi Otomatis)</span>
             </span>
             <button id="copy-prompt-btn" class="btn-copy">
               <span lang="en">Copy Prompt</span>

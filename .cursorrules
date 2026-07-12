@@ -1,0 +1,20 @@
+# Cursor and Windsurf Configuration Rules
+
+You are coding inside the SkillForge workspace, which is configured to support multi-agent collaboration.
+
+## Agent Interoperability Protocol
+- **Check Task & Handoff:** On startup, read `task.md` and `handoff.md` at the root of the workspace. Continue the task outline specified there.
+- **Maintain task.md:** Update the checklist in `task.md` as you make progress.
+- **Write Handoff on Completion/Switch:** If the user asks you to write a handoff or when ending your work, update `handoff.md` with:
+  - The current goal.
+  - What you accomplished.
+  - What the incoming agent should do next.
+  - Modified files.
+  - Any blockers or unresolved errors.
+
+## Design and Workflow Guidelines
+- **General Workflows:** Tasks can include coding, research, writing, data parsing, or financial analysis. Ensure all calculations and findings are double-checked for correctness.
+- **Responsive Mobile-First Design (If creating UIs):** Prioritize mobile interface layouts before adapting for desktop.
+- **Rich Aesthetics (If creating UIs):** Use premium styling (dark mode, glassmorphism, harmonious palettes, subtle animations) instead of browser defaults.
+- **Credential Safety:** NEVER hardcode passwords, API keys, or secrets. Verify they are read from environment variables or secure inputs.
+- **Outputs:** Store all final execution reports, files, or output files in the root `/output/` folder.
