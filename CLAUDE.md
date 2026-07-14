@@ -14,10 +14,12 @@ SkillForge is a customization workspace and meta-agent factory used to define, d
 >    - Modified files and any blockers.
 
 ## Project Guidelines
-- **General Workflows:** Tasks can range from data processing, document analysis, writing, marketing strategies, to development. Keep all workflows structured and verify outputs.
+- **General Workflows:** Tasks can range from data processing, document analysis, writing, marketing strategies, to software development.
+- **Universal Browser Pilot (`browser-pilot`):** Utilize the `browser-pilot` skill (powered by Chrome DevTools MCP) for dynamic web scraping, multi-field form entry (`fill_form`), layout visual auditing, and persistent web session management.
+- **`skills.sh` Discovery & Validation:** Use `npx skills find <query>` to search registered community skills. Evaluate candidates against user requirements; if no exact match is found, forge custom skills tailored to the specific target workflow.
 - **UI Design (If applicable):** If a task involves generating web interfaces, ensure they are responsive, mobile-view first, and utilize premium aesthetics (dark mode, glassmorphism).
 - **Credential Safety:** NEVER expose or commit API keys, passwords, or credentials. Read them securely or prompt the user.
-- **Outputs & Deliverables:** Store all final execution reports, data outputs, or generated deliverables in the `/output/` folder of the workspace.
+- **Outputs & Deliverables:** Store all final execution reports, data outputs, screenshots, or generated deliverables in the `/output/` folder of the workspace.
 
 ## Build and Run Commands
 - This is a static site. No build command is necessary.

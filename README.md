@@ -10,7 +10,8 @@ SkillForge adalah framework kustomisasi workspace yang dirancang untuk membangun
 
 ### Fitur
 
-- **Agent Forge (Meta-Agent):** Agen analis sistem yang mewawancarai pengguna untuk menerjemahkan permintaan samar menjadi ekosistem sub-agent kustom.
+- **Agent Forge (Meta-Agent):** Agen analis sistem yang mewawancarai pengguna untuk menerjemahkan permintaan samar menjadi ekosistem sub-agent kustom. Dilengkapi integrasi pencarian & validasi `skills.sh` untuk mengevaluasi skill komunitas vs membuat skill kustom presisi dari nol.
+- **Universal Browser Pilot (`browser-pilot`):** Skill kontrol browser serbaguna berbasis Chrome DevTools MCP untuk scraping web dinamis, pengisian form massal cepat (`fill_form`), pengujian responsivitas visual, dan manajemen sesi web persisten.
 - **Memori User Profile:** Pembelajaran dinamis terhadap preferensi pengguna, menyimpan konteks secara lokal untuk mempersonalisasi interaksi selanjutnya.
 - **Auto Update:** Integrasi bawaan dengan Git untuk secara otomatis mendeteksi dan memperbarui skill agen agar tetap sinkron.
 - **Workspace Orchestrator (AGENTS.md):** Pondasi instruksi pusat yang mengotomatisasi inisialisasi profile, pemeriksaan update, dan koordinasi antar sub-agent pada setiap startup sesi.
@@ -22,12 +23,12 @@ SkillForge adalah framework kustomisasi workspace yang dirancang untuk membangun
 SkillForge/
 ├── .agents/
 │   ├── skills/
-│   │   ├── agent-forge/       # Meta-Agent Architect
+│   │   ├── agent-forge/       # Meta-Agent Architect (dengan Integrasi Validasi skills.sh)
+│   │   ├── browser-pilot/      # Universal Browser Automation & Control (Chrome DevTools MCP)
 │   │   ├── user-profile/      # Personalisasi & memori
 │   │   └── auto-update/       # Sinkronisasi Git
-│   ├── user-profile.json      # File preferensi memori
 │   └── AGENTS.md              # Workspace Orchestrator (Instruksi Utama Agen)
-├── output/                    # Direktori standar untuk distribusi paket Agen Mandiri Baru
+├── output/                    # Direktori standar untuk distribusi paket Agen Mandiri Baru & Deliverables
 ├── index.html                 # Landing Page Multi-bahasa
 ├── style.css                  # Desain responsif premium
 ├── script.js                  # Logika landing page & pergantian bahasa
@@ -35,6 +36,11 @@ SkillForge/
 ```
 
 ### Yang Baru (What's New)
+
+#### Versi 1.1.0 (14 Juli 2026)
+- **Universal Browser Pilot (`browser-pilot`):** Menambahkan skill universal baru untuk otomatisasi Chrome via MCP (dynamic scraping, pengisian form massal, audit responsivitas, dan sesi persisten).
+- **Validasi & Discovery `skills.sh`:** Mengintegrasikan mesin pencari & validasi `skills.sh` ke dalam `agent-forge` untuk mengevaluasi kecocokan skill komunitas vs membuat skill kustom dari nol.
+- **Integrasi Protocol:** Memperbarui jembatan multi-agen (`CLAUDE.md`, `.cursorrules`, `task.md`) dengan dukungan fitur universal baru.
 
 #### Versi 1.0.0 (4 Juli 2026)
 - **Rilis Awal:** Meluncurkan pondasi utama SkillForge.
@@ -86,7 +92,8 @@ SkillForge is a workspace customization framework designed to build, manage, and
 
 ### Features
 
-- **Agent Forge (Meta-Agent):** A system analyst agent that interviews users to translate high-level requests into customized sub-agent ecosystems.
+- **Agent Forge (Meta-Agent):** A system analyst agent that interviews users to translate high-level requests into customized sub-agent ecosystems. Now equipped with `skills.sh` discovery & validation to evaluate community skills vs building tailored skills from scratch.
+- **Universal Browser Pilot (`browser-pilot`):** A domain-agnostic web automation and inspection skill powered by Chrome DevTools MCP for dynamic web scraping, fast form population (`fill_form`), visual auditing, and persistent web sessions.
 - **User Profile Memory:** Dynamic learning of user preferences, storing context locally to personalize subsequent interactions.
 - **Auto Update:** Built-in git integration to automatically fetch and pull changes to keep skills synchronized.
 - **Workspace Orchestrator (AGENTS.md):** Central instruction foundation that automates profile initialization, updates checks, and coordinates work delegation between sub-agents on every session startup.
@@ -111,6 +118,11 @@ SkillForge/
 ```
 
 ### What's New
+
+#### Version 1.1.0 (July 14, 2026)
+- **Universal Browser Pilot (`browser-pilot`):** Added new universal browser control skill powered by Chrome DevTools MCP (dynamic web scraping, form batching, layout visual auditing, and session persistence).
+- **`skills.sh` Validation Engine:** Integrated community skill search & evaluation into `agent-forge` with automated fallback to forge custom skills when candidates don't match requirements.
+- **Protocol Upgrades:** Updated cross-agent interoperability configurations (`CLAUDE.md`, `.cursorrules`, `task.md`) for all major AI coding assistants.
 
 #### Version 1.0.0 (July 4, 2026)
 - **Initial Release:** Launched the SkillForge foundation.

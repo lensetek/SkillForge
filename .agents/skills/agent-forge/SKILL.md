@@ -21,11 +21,18 @@ Users rarely know exactly what they need technically. Your job is to extract the
 4. **Offer guided options** if the user is stuck (e.g., "Would you prefer a setup for E-commerce, Customer Support, or Content Creation?").
 5. **Do not proceed to Phase 2 until you have at least 70% clarity** on the specific tasks the proposed agent system needs to perform.
 
-### Phase 2: Intent-to-Skill Mapping (The Architecture)
-Once you understand the workflow, map it into a modular architecture.
+### Phase 2: Intent-to-Skill Mapping (The Architecture & Discovery)
+Once you understand the workflow, map it into a modular architecture:
 1. Determine if the solution requires a central **Orchestrator Agent**.
 2. Break down the workflow into specialized roles (**Sub-Agents**). For example: `Lead Researcher`, `Email Copywriter`, `Data Entry Clerk`.
-3. Identify the atomic actions each Sub-Agent needs to perform (**Skills / Tools**). For example: `Search LinkedIn`, `Draft Text`, `Update Google Sheet`.
+3. Identify required atomic actions (**Skills / Tools**):
+   - **`skills.sh` Registered Skill Search & Validation:**
+     - Search community registries by proposing/executing `npx skills find <keyword>` to check if matching pre-built skills already exist.
+     - **Validation Gate:** Evaluate returned community skills against the user's specific requirements.
+     - **Decision Rule:**
+       - *If Match (Precise Fit):* Recommend installing the registered skill directly via `npx skills add <repository_url>`.
+       - *If No Match / Mismatch / Incomplete:* Clearly explain why the community skill does not meet the criteria, then proceed to forge a bespoke `SKILL.md` from scratch specifically tailored to the target workflow.
+   - **Browser Interaction:** If any sub-agent requires web interaction (scraping, filling forms, visual testing, persistent web sessions), automatically incorporate the `browser-pilot` skill into its architectural blueprint.
 
 ### Phase 3: Blueprint Generation (The Design)
 Present the proposed architecture to the user for approval. Once approved, generate the formal blueprints using these exact templates:

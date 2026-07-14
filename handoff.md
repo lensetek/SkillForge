@@ -1,26 +1,26 @@
 # Active Session Handoff
 
 ## Goal
-Implement the **Universal Agent Interoperability & Handoff Protocol** to allow any AI agent (Antigravity, Claude Code, Cursor, Aider, etc.) to seamlessly share context and progress.
+Integrated **Universal `browser-pilot` Skill** (powered by Chrome DevTools MCP) and the **`skills.sh` Discovery & Validation Engine** into the SkillForge ecosystem.
 
 ## Last Status
-- Updated the main orchestrator instructions in [.agents/AGENTS.md](file:///.agents/AGENTS.md) to check for handoff files at startup and write handoff files when closing.
-- Updated the blueprint requirements in [.agents/skills/agent-forge/SKILL.md](file:///.agents/skills/agent-forge/SKILL.md) to ensure any new agents created by the Agent Forge will have this handoff system pre-configured.
-- Created agent-specific bridge files:
-  - [CLAUDE.md](file:///CLAUDE.md) (for Claude Code)
-  - [.cursorrules](file:///.cursorrules) (for Cursor and Windsurf)
-- Initialized the central [task.md](file:///task.md) with setup progress and future application roadmaps.
+- Created new universal skill [.agents/skills/browser-pilot/SKILL.md](file:///.agents/skills/browser-pilot/SKILL.md) for dynamic web scraping, mass form entry (`fill_form`), layout visual auditing, and persistent web sessions.
+- Updated [.agents/skills/agent-forge/SKILL.md](file:///.agents/skills/agent-forge/SKILL.md) with `skills.sh` search & validation logic (`npx skills find <query>`), evaluating community skills and forging custom skills when candidates don't match.
+- Updated bridge configuration files ([CLAUDE.md](file:///CLAUDE.md) & [.cursorrules](file:///.cursorrules)).
+- Updated documentation ([README.md](file:///README.md)) and landing page ([index.html](file:///index.html)).
 
 ## Next Steps
-1. **Verification:** Try starting a session with another agent tool (e.g. `npx @claudecode/cli` or opening the folder in Cursor) and ask: *"Lanjutkan pekerjaan dari handoff"* (Continue work from handoff).
-2. **SkillForge Tasks:** Continue with the roadmap in `task.md`, specifically setting up the active agent visual status indicator.
+1. **Testing Browser Automation:** Test executing a dynamic scraping or form population task using the new `browser-pilot` skill.
+2. **Skill Forge Demonstration:** Test `agent-forge` with a query requiring external skills to observe the `skills.sh` search, validation, and custom skill fallback.
 
 ## Modified Files
-- [.agents/AGENTS.md](file:///.agents/AGENTS.md) (Modified)
+- [.agents/skills/browser-pilot/SKILL.md](file:///.agents/skills/browser-pilot/SKILL.md) (New)
 - [.agents/skills/agent-forge/SKILL.md](file:///.agents/skills/agent-forge/SKILL.md) (Modified)
-- [CLAUDE.md](file:///CLAUDE.md) (New)
-- [.cursorrules](file:///.cursorrules) (New)
-- [task.md](file:///task.md) (New)
+- [CLAUDE.md](file:///CLAUDE.md) (Modified)
+- [.cursorrules](file:///.cursorrules) (Modified)
+- [task.md](file:///task.md) (Modified)
+- [README.md](file:///README.md) (Modified)
+- [index.html](file:///index.html) (Modified)
 
 ## Active Blockers / Errors
 - None. Ready for transition testing.

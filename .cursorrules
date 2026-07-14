@@ -14,7 +14,9 @@ You are coding inside the SkillForge workspace, which is configured to support m
 
 ## Design and Workflow Guidelines
 - **General Workflows:** Tasks can include coding, research, writing, data parsing, or financial analysis. Ensure all calculations and findings are double-checked for correctness.
+- **Universal Browser Automation:** Use `browser-pilot` (Chrome DevTools MCP) for dynamic page scraping, fast form population (`fill_form`), and browser session persistence.
+- **`skills.sh` Discovery & Fallback:** Search community skills via `npx skills find <query>`. Validate suitability against exact user requirements. If unmatched, forge custom skills from scratch.
 - **Responsive Mobile-First Design (If creating UIs):** Prioritize mobile interface layouts before adapting for desktop.
 - **Rich Aesthetics (If creating UIs):** Use premium styling (dark mode, glassmorphism, harmonious palettes, subtle animations) instead of browser defaults.
 - **Credential Safety:** NEVER hardcode passwords, API keys, or secrets. Verify they are read from environment variables or secure inputs.
-- **Outputs:** Store all final execution reports, files, or output files in the root `/output/` folder.
+- **Outputs:** Store all final execution reports, files, screenshots, or output files in the root `/output/` folder.

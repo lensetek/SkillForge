@@ -1,13 +1,8 @@
-# Project Tasks & Roadmaps
-
-This is the central task checklist for all AI agents working on this project.
-
-## Agent Interoperability Protocol Setup
-- [x] Integrate handoff routines in `.agents/AGENTS.md` (Antigravity orchestrator)
-- [x] Configure future generated agents to support handoff in `agent-forge/SKILL.md`
-- [x] Create `CLAUDE.md` and `.cursorrules` bridges
-- [x] Initialize shared `task.md` and `handoff.md`
-- [ ] Test a seamless transition between two agents (Antigravity and Claude Code/Cursor)
+## Agent Ecosystem & Universal Skills
+- [x] Integrate Universal `browser-pilot` Skill (Chrome DevTools MCP, Smart Form Fill, Dynamic Scraping, Auditing)
+- [x] Integrate `skills.sh` Discovery & Validation Engine into `agent-forge`
+- [x] Configure universal bridge files (`CLAUDE.md`, `.cursorrules`, `AGENTS.md`)
+- [x] Update documentation (`README.md`), landing page (`index.html`), and push release
 
 ## SkillForge General & UI Tasks
 - [ ] Add visual feedback indicator in the SkillForge web dashboard for the active agent status
