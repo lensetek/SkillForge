@@ -37,6 +37,10 @@ SkillForge/
 
 ### Yang Baru (What's New)
 
+#### Versi 1.2.0 (15 Juli 2026)
+- **Obsidian Vault Manager (`obsidian-vault-manager`):** Menambahkan skill baru untuk membuat Map of Content (`000_SkillForge_MOC.md`), menyelaraskan sintaks Wikilink (`[[...]]`), dan mengekstrak tugas dari catatan Obsidian ke `task.md`.
+- **Integrasi Vault Global & Protocols:** Memperbarui `AGENTS.md`, `user-profile.json`, dan `agent-forge` dengan protokol YAML frontmatter dan bidirectional linking Obsidian untuk tampilan Graph View yang seamless.
+
 #### Versi 1.1.0 (14 Juli 2026)
 - **Universal Browser Pilot (`browser-pilot`):** Menambahkan skill universal baru untuk otomatisasi Chrome via MCP (dynamic scraping, pengisian form massal, audit responsivitas, dan sesi persisten).
 - **Validasi & Discovery `skills.sh`:** Mengintegrasikan mesin pencari & validasi `skills.sh` ke dalam `agent-forge` untuk mengevaluasi kecocokan skill komunitas vs membuat skill kustom dari nol.
@@ -118,6 +122,10 @@ SkillForge/
 ```
 
 ### What's New
+
+#### Version 1.2.0 (July 15, 2026)
+- **Obsidian Vault Manager (`obsidian-vault-manager`):** Added new skill for generating Map of Content (`000_SkillForge_MOC.md`), formatting Wikilinks (`[[...]]`), and extracting checklist tasks into `task.md`.
+- **Global Vault Protocols:** Updated `AGENTS.md`, `user-profile.json`, and `agent-forge` to enforce Obsidian YAML frontmatter and bidirectional wikilinks for full Graph View compatibility.
 
 #### Version 1.1.0 (July 14, 2026)
 - **Universal Browser Pilot (`browser-pilot`):** Added new universal browser control skill powered by Chrome DevTools MCP (dynamic web scraping, form batching, layout visual auditing, and session persistence).
